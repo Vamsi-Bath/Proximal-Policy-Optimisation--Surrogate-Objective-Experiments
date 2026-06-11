@@ -1,8 +1,4 @@
-# SURROGATE_OBJ_EXP
-
-GitHub-ready PPO surrogate objective experiments for MuJoCo continuous-control environments.
-
-This repository compares:
+# PPO surrogate objective experiments for MuJoCo continuous-control environments.
 
 1. **PPO-Clip**: clipped surrogate objective.
 2. **PPO-KL**: no clipped surrogate; adaptive KL-penalty objective plus target-KL stopping.
