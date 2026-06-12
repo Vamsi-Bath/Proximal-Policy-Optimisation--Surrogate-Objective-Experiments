@@ -25,6 +25,24 @@ The Atari experiments compared PPO Clip, PPO KL/Penalty, PPO No Clip, PPO with R
 | Space Invaders |    258.6 |            195.0 |       225.1 |       - | 699 ± 266 | 623 ± 202 | 960 ± 425 |
 | Tennis         |    -18.7 |            -23.4 |       -21.3 |   -13.8 |   -24 ± 0 |         - |         - |
 
+
+<table>
+  <tr>
+    <td align="center">
+      <img src="Assets/PPO%20RND.png" width="320"><br>
+      <sub>PPO with RND on Atari Tennis</sub>
+    </td>
+    <td align="center">
+      <img src="Assets/PPO%20performance.png" width="320"><br>
+      <sub>PPO variants on Space Invaders</sub>
+    </td>
+    <td align="center">
+      <img src="Assets/SpaceInvaders.png" width="320"><br>
+      <sub>DQN, PPO, and random agent on Space Invaders</sub>
+    </td>
+  </tr>
+</table>
+
 PPO Clip achieved the strongest performance among the custom PPO variants on Space Invaders, while PPO KL/Penalty was more stable but slower to improve. PPO No Clip showed less stable learning behaviour, supporting the motivation for studying whether PPO’s clipped surrogate objective is a key contributor to stable policy improvement. PPO with RND improved exploration on the sparse-reward Tennis environment, suggesting that exploration bonuses or reset-based interventions may be useful when reward feedback is limited.
 
 ## Current setup
