@@ -14,7 +14,7 @@ The main goal is to understand whether PPO’s performance and stability come ma
 The experiments also investigate how regularisation techniques affect policy learning. This includes L1 regularisation, L2 regularisation or AdamW-style weight decay, and shrink-and-perturb resets. These ablations are used to test whether regularisation can improve robustness, reduce overfitting to recent trajectories, preserve policy plasticity, or prevent unstable policy updates.
 
 
-## Reference results from previous PPO/DQN Atari experiments
+## Reference results from PPO/DQN Atari experiments
 
 The following table summarises results reported on Atari pixel-control environments. These results are included as contextual motivation for the current PPO surrogate-objective experiments, but they are not directly comparable to MuJoCo experiments because the environments, observation spaces, action spaces, and training setups differ.
 
