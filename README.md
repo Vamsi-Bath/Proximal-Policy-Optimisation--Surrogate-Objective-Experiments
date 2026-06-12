@@ -29,7 +29,7 @@ The Atari experiments compared PPO Clip, PPO KL/Penalty, PPO No Clip, PPO with R
 <table>
   <tr>
     <td align="center">
-      <img src="Assets/PPO%20RND.png" width="400"><br>
+      <img src="Assets/PPO%20RND.png" width="500"><br>
       <sub>PPO with RND on Atari Tennis</sub>
     </td> 
     <td align="center">
