@@ -29,15 +29,15 @@ The Atari experiments compared PPO Clip, PPO KL/Penalty, PPO No Clip, PPO with R
 <table>
   <tr>
     <td align="center">
-      <img src="Assets/PPO%20RND.png" width="320"><br>
+      <img src="Assets/PPO%20RND.png" width="400"><br>
       <sub>PPO with RND on Atari Tennis</sub>
     </td> 
     <td align="center">
-      <img src="Assets/PPO%20performance.png" width="320"><br>
+      <img src="Assets/PPO%20performance.png" width="400"><br>
       <sub>PPO variants on Space Invaders</sub>
     </td>
     <td align="center">
-      <img src="Assets/SpaceInvaders.png" width="320"><br>
+      <img src="Assets/SpaceInvaders.png" width="400"><br>
       <sub>DQN, PPO, and random agent on Space Invaders</sub>
     </td>
   </tr>
