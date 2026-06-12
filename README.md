@@ -13,6 +13,21 @@ The main goal is to understand whether PPO’s performance and stability come ma
 
 The experiments also investigate how regularisation techniques affect policy learning. This includes L1 regularisation, L2 regularisation or AdamW-style weight decay, and shrink-and-perturb resets. These ablations are used to test whether regularisation can improve robustness, reduce overfitting to recent trajectories, preserve policy plasticity, or prevent unstable policy updates.
 
+
+## Reference results from previous PPO/DQN Atari experiments
+
+The following table summarises results reported on Atari pixel-control environments. These results are included as contextual motivation for the current PPO surrogate-objective experiments, but they are not directly comparable to MuJoCo experiments because the environments, observation spaces, action spaces, and training setups differ.
+
+The Atari experiments compared PPO Clip, PPO KL/Penalty, PPO No Clip, PPO with Random Network Distillation (RND), and DQN on `SpaceInvaders` and `Tennis`. Reported scores are average rewards over 100 randomly initialised evaluation episodes.
+
+| Environment    | PPO Clip | PPO KL / Penalty | PPO No Clip | PPO RND |       DQN |   DQN sb3 |   PPO sb3 |
+| -------------- | -------: | ---------------: | ----------: | ------: | --------: | --------: | --------: |
+| Space Invaders |    258.6 |            195.0 |       225.1 |       - | 699 ± 266 | 623 ± 202 | 960 ± 425 |
+| Tennis         |    -18.7 |            -23.4 |       -21.3 |   -13.8 |   -24 ± 0 |         - |         - |
+
+The main takeaway from the Atari results was that PPO Clip achieved the strongest performance among the custom PPO variants on Space Invaders, while PPO KL/Penalty was more stable but slower to improve. PPO No Clip showed less stable learning behaviour, supporting the motivation for studying whether PPO’s clipped surrogate objective is a key contributor to stable policy improvement. PPO with RND improved exploration on the sparse-reward Tennis environment, suggesting that exploration bonuses or reset-based interventions may be useful when reward feedback is limited.
+
+
 The default environment is `HalfCheetah-v5`, a MuJoCo continuous-control benchmark. The agent is trained to maximise episodic return while metrics such as approximate KL divergence, entropy, value loss, explained variance, gradient norm, action statistics, and state coverage are logged. These metrics allow comparison not only of final returns, but also of how each objective behaves during training.
 
 This experiment aims to answer the following research question:
@@ -111,6 +126,8 @@ SURROGATE_OBJ_EXP/
     plot_results.py
     utils.py
 ```
+
+
 
 ## Notes
 
