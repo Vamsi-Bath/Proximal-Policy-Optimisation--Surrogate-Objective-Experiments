@@ -27,6 +27,7 @@ The Atari experiments compared PPO Clip, PPO KL/Penalty, PPO No Clip, PPO with R
 
 The main takeaway from the Atari results was that PPO Clip achieved the strongest performance among the custom PPO variants on Space Invaders, while PPO KL/Penalty was more stable but slower to improve. PPO No Clip showed less stable learning behaviour, supporting the motivation for studying whether PPO’s clipped surrogate objective is a key contributor to stable policy improvement. PPO with RND improved exploration on the sparse-reward Tennis environment, suggesting that exploration bonuses or reset-based interventions may be useful when reward feedback is limited.
 
+## Current setup
 
 The default environment is `HalfCheetah-v5`, a MuJoCo continuous-control benchmark. The agent is trained to maximise episodic return while metrics such as approximate KL divergence, entropy, value loss, explained variance, gradient norm, action statistics, and state coverage are logged. These metrics allow comparison not only of final returns, but also of how each objective behaves during training.
 
