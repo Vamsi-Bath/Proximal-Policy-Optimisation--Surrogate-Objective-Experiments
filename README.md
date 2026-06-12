@@ -19,10 +19,6 @@ This experiment aims to answer the following research question:
 
 **How does the choice of PPO surrogate objective, together with regularisation and reset-based interventions, influence learning performance, stability, and exploration in continuous-control reinforcement learning?**
 
-1. **PPO-Clip**: clipped surrogate objective.
-2. **PPO-KL**: no clipped surrogate; adaptive KL-penalty objective plus target-KL stopping.
-3. **PPO-NoClip**: no clipped surrogate; plain likelihood-ratio policy gradient with optional target-KL stopping.
-
 It also supports ablations for:
 
 - L1 regularisation
